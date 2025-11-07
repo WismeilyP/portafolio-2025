@@ -716,10 +716,20 @@
 
         <div class="flex flex-col justify-center sm:flex-row gap-3 w-full">
 
-          <div class="input-div">
-            <input type="text" placeholder="Enter your email" class="input-email">
-            <button type="submit" class="btn-input-email rounded-lg shadow transition-all duration-300 ease-in-out hover:bg-purple-700">SEND</button>
-          </div>         
+          <!-- FORM: Newsletter -->
+          <form id="newsletterForm"
+                class="input-div"
+                novalidate>
+            <input type="email" name="email" id="newsletter-email" placeholder="Enter your email"
+                  class="input-email" required>
+
+            <button type="submit"
+                    class="btn-input-email rounded-lg shadow transition-all duration-300 ease-in-out hover:bg-purple-700">
+              SEND
+            </button>
+
+            <p id="newsletterMessage" class="newsletter-message" aria-live="polite"></p>
+          </form>
 
         </div>
 
@@ -799,7 +809,49 @@
   <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
   <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  (function () {
+    const form = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('newsletter-email');
+    const msg = document.getElementById('newsletterMessage');
 
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const email = emailInput.value.trim();
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!regex.test(email)) {
+        msg.className = 'newsletter-message error';
+        msg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      msg.className = 'newsletter-message';
+      msg.textContent = 'Sending…';
+
+      try {
+        const response = await fetch('https://hook.eu2.make.com/iucjskra2v6608k9sn92h502jvvzbd8w', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        });
+
+        if (response.ok) {
+          msg.className = 'newsletter-message success';
+          msg.textContent = 'Thanks! Your email has been sent successfully.';
+          emailInput.value = '';
+        } else {
+          throw new Error('Network response was not OK');
+        }
+      } catch (error) {
+        console.error(error);
+        msg.className = 'newsletter-message error';
+        msg.textContent = 'There was an error sending your email. Please try again.';
+      }
+    });
+  })();
+</script>
 </body>
 </html>
 

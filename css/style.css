@@ -211,7 +211,6 @@ nav.active .nav-links {
 }
 
 .hero-content {
-  max-width: 50%;
   position: relative;
   z-index: 2;
 }
@@ -1522,22 +1521,22 @@ a:focus, button:focus {
       color: #00aaff !important;
     }
     .whatsapp-float {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 9999;
-  animation: pulse 2s infinite;
-}
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 9999;
+      animation: pulse 2s infinite;
+    }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
@@ -1600,9 +1599,19 @@ a.contact-btn-nav:hover
   font-size: 20px !important;
 }
 
+p#newsletterMessage {
+    position: absolute;
+    margin-top: 5em;
+}
+
  /* Styles for screens 768px and wider (e.g., tablets, desktops) */
     @media (min-width: 768px) 
     {
+
+      .hero-content 
+      {
+        max-width: 50%;
+      }
 
       .cardd 
       {
