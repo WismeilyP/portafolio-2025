@@ -18,7 +18,7 @@
     ".hero .hero-content h1": { en: "Web Developer\nUX/UI Designer", es: "Desarrollo Web\nDiseño UX/UI" },
     ".hero .hero-content p": { 
       en: "I design and build modern websites that are fast and intuitive. \nFrom custom web development to scalable CMS solutions, I turn ideas into results.",
-      es: "Diseño y desarrollo sitios web modernos y rápidos. Desde desarrollos a medida hasta soluciones CMS escalables."
+      es: "Creo sitios web profesionales a medida, ya sea desde código o utilizando tu CMS de preferencia, optimizados para rendimiento, escalabilidad y una experiencia de usuario excepcional."
     },
     "#box": { en: "Download CV", es: "Descargar CV" },
 
@@ -45,7 +45,7 @@
     ".z-index-texto .font-extrabold": 
     { 
         en: "Turning Ideas into Digital Experiences<br><span class='letstalk'>Let’s Talk</span>", 
-        es: "Ideas en experiencias digitales<br><span class='letstalk'>Hablemos</span>" 
+        es: "De ideas a experiencias digitales<br><span class='letstalk'>Hablemos</span>" 
     },
 
 
@@ -70,7 +70,7 @@
     },
     {
       en: "I specialize in building fast, responsive, and dynamic interfaces by applying industry best practices. My priority is to transform designs into smooth and functional experiences across all devices.",
-      es: "Me especializo en construir interfaces rápidas, responsivas y dinámicas aplicando las mejores prácticas. Prioritizo convertir diseños en experiencias fluidas y funcionales en todos los dispositivos."
+      es: "Me especializo en construir interfaces rápidas, responsivas y dinámicas aplicando las mejores prácticas. Mi prioridad es convertir diseños en experiencias fluidas y funcionales en todos los dispositivos."
     },
     {
       en: "I create professional websites and online stores using various CMS platforms, optimized for performance, security, and scalability. My focus is on delivering custom solutions that help brands and businesses grow in the digital world.",
