@@ -126,7 +126,7 @@ nav {
 /* Responsive */
 @media (max-width: 768px) {
   nav {
-    padding: .6rem 2rem !important;
+    padding: .6rem 1rem !important;
   }
   .logo {
     width: 120px;
@@ -142,20 +142,24 @@ nav {
     {
       padding: .5rem 2.5rem !important;
     }
+    footer 
+    {
+    padding: 1rem 1em !important;
+   }
 
     .menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: rgba(10,10,10,0.95);
-    align-items: center;
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-  }
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(10,10,10,0.95);
+      align-items: center;
+      transform: translateY(-20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
 
   /* Menú abierto */
   nav.active .menu {
